@@ -55,7 +55,7 @@ Default: `true`
 
 - @scope support
 - `config` option
-- `renameFn` option
+- `rename` option
 - `renameFn` option
 
 PRs welcome!

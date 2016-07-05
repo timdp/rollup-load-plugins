@@ -53,6 +53,7 @@ Default: `true`
 
 ## TODO
 
+- Tests
 - `config` option
 - `rename` option
 - `renameFn` option

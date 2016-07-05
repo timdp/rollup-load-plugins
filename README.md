@@ -53,7 +53,6 @@ Default: `true`
 
 ## TODO
 
-- @scope support
 - `config` option
 - `rename` option
 - `renameFn` option

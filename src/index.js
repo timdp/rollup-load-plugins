@@ -59,7 +59,8 @@ const defineProperty = (result, key, plugin, resolveOptions) => {
 const buildResult = (plugins, {config, replaceString, camelize}) => {
   const resolveOptions = {basedir: dirname(config)}
   const result = {}
-  for (const {name, scope, id} of plugins) {
+  for (let i = 0; i < plugins.length; ++i) {
+    const {name, scope, id} = plugins[i]
     const parent = allocateParent(result, scope)
     const key = getKey(id, {replaceString, camelize})
     defineProperty(parent, key, name, resolveOptions)

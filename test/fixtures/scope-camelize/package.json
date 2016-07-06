@@ -1,0 +1,6 @@
+{
+  "name": "scope",
+  "dependencies": {
+    "@scope/rollup-plugin-foo-bar": "*"
+  }
+}

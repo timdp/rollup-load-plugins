@@ -7,3 +7,4 @@ matrix:
     - node_js: 5
     - node_js: 6
     - node_js: node
+      env: COVERALLS=1

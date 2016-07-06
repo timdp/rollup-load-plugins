@@ -1,0 +1,9 @@
+{
+  "name": "basic-dev-deps",
+  "dependencies": {
+    "rollup-plugin-foo": "*"
+  },
+  "devDependencies": {
+    "rollup-plugin-bar": "*"
+  }
+}

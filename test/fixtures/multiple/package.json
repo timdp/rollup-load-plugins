@@ -1,0 +1,8 @@
+{
+  "name": "multiple",
+  "dependencies": {
+    "rollup-plugin-foo": "*",
+    "rollup-plugin-bar": "*",
+    "baz": "*"
+  }
+}

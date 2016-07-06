@@ -1,0 +1,6 @@
+{
+  "name": "basic",
+  "dependencies": {
+    "rollup-plugin-foo": "*"
+  }
+}

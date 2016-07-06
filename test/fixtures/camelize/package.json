@@ -1,0 +1,6 @@
+{
+  "name": "camelize",
+  "dependencies": {
+    "rollup-plugin-foo-bar": "*"
+  }
+}

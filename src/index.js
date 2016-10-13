@@ -69,8 +69,8 @@ const buildResult = (plugins, {config, replaceString, camelize}) => {
 }
 
 export default (options = {}) => {
-  const {pattern, scope, replaceString, camelize} = defaults(options, defaultOptions)
-  const {pkg, path: config} = readPkg.sync()
+  const {pattern, scope, replaceString, camelize, cwd} = defaults(options, defaultOptions)
+  const {pkg, path: config} = readPkg.sync({cwd})
   const plugins = filterDependencies(pkg, {scope, pattern})
   return buildResult(plugins, {config, replaceString, camelize})
 }

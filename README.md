@@ -37,19 +37,34 @@ The behavior should be identical.
 
 ### `pattern`
 
+The glob(s) against which to match package names.
+
 Default: `['rollup-plugin-*']`
 
 ### `scope`
+
+The keys from `package.json` in which to discover plugins.
 
 Default: `['dependencies', 'devDependencies', 'peerDependencies']`
 
 ### `replaceString`
 
+The string or regexp to replace in the plugin name.
+
 Default: `/^rollup-plugin-/`
 
 ### `camelize`
 
+Transform hyphenated plugin names to camelCase.
+
 Default: `true`
+
+### `cwd`
+
+The path to the package depending on the plugin. This option does not exist in
+gulp-load-plugins.
+
+Default: `process.cwd()`
 
 ## TODO
 

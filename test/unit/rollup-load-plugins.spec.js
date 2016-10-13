@@ -3,15 +3,19 @@ import path from 'path'
 
 describe('rollup-load-plugins', function () {
   const load = function (name, options = {}) {
-    const dir = path.join(__dirname, '../fixtures', name)
-    const cwd = process.cwd()
-    process.chdir(dir)
+    const oldCwd = process.cwd()
+    if (options != null && options.cwd == null) {
+      const dir = path.join(__dirname, '../fixtures', name)
+      process.chdir(dir)
+    }
     try {
       return (options === false) ? loadPlugins() : loadPlugins(options)
     } catch (err) {
       throw err
     } finally {
-      process.chdir(cwd)
+      if (options != null && options.cwd == null) {
+        process.chdir(oldCwd)
+      }
     }
   }
 
@@ -118,6 +122,13 @@ describe('rollup-load-plugins', function () {
     it('does not camelize the scoped plugin name if option disabled', function () {
       const p = load('scope-camelize', {camelize: false})
       expect(p.scope).to.have.all.keys('foo-bar')
+    })
+  })
+
+  describe('cwd option', function () {
+    it('overrides cwd', function () {
+      const p = load('basic-deps', {cwd: path.join(__dirname, '../fixtures/basic-deps')})
+      expect(p).to.have.all.keys('foo')
     })
   })
 })

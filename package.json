@@ -25,9 +25,9 @@
   "dependencies": {
     "change-case": "^3.0.0",
     "defaults": "^1.0.3",
-    "mem": "^0.1.1",
+    "mem": "^1.1.0",
     "micromatch": "^2.3.10",
-    "read-pkg-up": "^1.0.1",
+    "read-pkg-up": "^2.0.0",
     "resolve": "^1.1.7"
   },
   "devDependencies": {

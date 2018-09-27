@@ -66,6 +66,15 @@ gulp-load-plugins.
 
 Default: `process.cwd()`
 
+### `maintainScope`
+
+Treat package scopes as intermediary objects. With this option set to `true`,
+`@mycompany/rollup-plugin-myplugin` will be available as
+`plugins.mycompany.myplugin`. Setting it to `false` will create
+`plugins.myplugin`, which can create naming collisions.
+
+Default: `true`
+
 ## TODO
 
 [gulp-load-plugins](https://www.npmjs.com/package/gulp-load-plugins) contains a

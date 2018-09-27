@@ -1,0 +1,8 @@
+{
+  "name": "scope",
+  "dependencies": {
+    "@scope/rollup-plugin-foo": "*",
+    "@scope/rollup-plugin-bar": "*",
+    "rollup-plugin-baz": "*"
+  }
+}

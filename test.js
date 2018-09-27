@@ -2,10 +2,12 @@ const { expect } = require('chai')
 const path = require('path')
 const loadPlugins = require('./')
 
+const FIXTURES = path.resolve(__dirname, 'fixtures')
+
 const load = function (name, options = {}) {
   const oldCwd = process.cwd()
   if (options != null && options.cwd == null) {
-    const dir = path.join(__dirname, 'test/fixtures', name)
+    const dir = path.join(FIXTURES, name)
     process.chdir(dir)
   }
   try {
@@ -128,8 +130,17 @@ describe('camelize option', function () {
 describe('cwd option', function () {
   it('overrides cwd', function () {
     const p = load('basic-deps', {
-      cwd: path.join(__dirname, 'test/fixtures/basic-deps')
+      cwd: path.join(FIXTURES, 'basic-deps')
     })
     expect(p).to.have.all.keys('foo')
+  })
+})
+
+describe('maintainScope option', function () {
+  it('removes scope when disabled', function () {
+    const p = load('scope-mix', {
+      maintainScope: false
+    })
+    expect(p).to.have.all.keys('foo', 'bar', 'baz')
   })
 })

@@ -68,11 +68,9 @@ Default: `process.cwd()`
 
 ## TODO
 
-- `config` option
-- `rename` option
-- `renameFn` option
-
-PRs welcome!
+[gulp-load-plugins](https://www.npmjs.com/package/gulp-load-plugins) contains a
+few more useful options that this package does not implement. Pull requests that
+implement those are appreciated.
 
 ## Author
 

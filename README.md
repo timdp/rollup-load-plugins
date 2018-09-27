@@ -9,7 +9,7 @@ Rollup.
 ## Installation
 
 ```bash
-npm i --save-dev rollup-load-plugins
+npm install --save-dev rollup-load-plugins
 ```
 
 ## Usage

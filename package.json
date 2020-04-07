@@ -22,7 +22,7 @@
   "repository": "timdp/rollup-load-plugins",
   "bugs": "https://github.com/timdp/rollup-load-plugins/issues",
   "dependencies": {
-    "camelcase": "^5.0.0",
+    "camelcase": "^6.0.0",
     "coveralls": "^3.0.2",
     "mem": "^4.0.0",
     "micromatch": "^3.1.10",
